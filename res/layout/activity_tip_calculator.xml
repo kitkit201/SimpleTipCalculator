@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipCalculator" >
+
+    <Button
+        android:id="@+id/bt15percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="calculate15percent"
+        android:text="15%" />
+   
+    <Button
+        android:id="@+id/bt20percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bt15percent"
+        android:layout_toRightOf="@+id/tvTip"
+        android:onClick="calculate20percent"
+        android:text="20%" />
+
+    <EditText
+        android:id="@+id/etbill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bt10percent"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/bt20percent"
+        android:layout_marginTop="43dp"
+        android:ems="10"
+        android:hint="Enter Total Bill Amount" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etbill"
+        android:layout_toLeftOf="@+id/etbill"
+        android:text="$"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="59dp"
+        android:hint="Tip value will go here" />
+
+    <Button
+        android:id="@+id/bt10percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tvTip"
+        android:onClick="calculate10percent"
+        android:text="10%" />
+
+</RelativeLayout>
